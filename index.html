@@ -5,19 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nick Hemenway</title>
   <style>
-    body {
-      font-family: "Helvetica", sans-serif;
-      margin: 0;
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    overflow: hidden;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
     }
-    main {
-      display: flex;
-      padding: 30px;
+    100% {
+      background-position: 200% 50%;
     }
+  }
+
+  h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15vw;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(90deg, #ff0075, #0075ff, #00ff75, #ffeb3b, #ff0075);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 8s linear infinite;
+    padding:5vw;
+    line-height:1.2;
+  }
   </style>
 </head>
 <body>
-  <main>
-    <h1>hello, world</h1>
-  </main>
+  <h1>hello, world</h1>
 </body>
 </html>
